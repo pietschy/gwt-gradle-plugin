@@ -1,4 +1,4 @@
-package com.pietschy.gradle.plugin.gwt
+package com.pietschy.gradle.gwt
 /**
  * Created by IntelliJ IDEA.
  * User: andrew

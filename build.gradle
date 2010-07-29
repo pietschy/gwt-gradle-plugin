@@ -2,7 +2,7 @@ usePlugin('groovy')
 usePlugin('maven')
 
 group = 'com.pietschy.gradle'
-version = '0.8-4-SNAPSHOT'
+version = '0.8'
 
 // currently builds with Gradle 0.8
 gradleHome = System.getenv()['GRADLE_HOME']

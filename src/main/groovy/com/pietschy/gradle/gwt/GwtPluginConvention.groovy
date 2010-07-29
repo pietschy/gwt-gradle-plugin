@@ -1,4 +1,4 @@
-package com.pietschy.gradle.plugin.gwt
+package com.pietschy.gradle.gwt
 
 import org.gradle.api.Project
 

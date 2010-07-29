@@ -1,4 +1,4 @@
-package com.pietschy.gradle.plugin.gwt.task
+package com.pietschy.gradle.gwt.task
 /**
  * Created by IntelliJ IDEA.
  * User: andrew

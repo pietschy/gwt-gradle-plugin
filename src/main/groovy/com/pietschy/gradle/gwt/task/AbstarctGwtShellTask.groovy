@@ -1,12 +1,9 @@
-package com.pietschy.gradle.plugin.gwt.task
+package com.pietschy.gradle.gwt.task
 
-import org.gradle.api.Project
 import org.gradle.util.GFileUtils
-import org.gradle.api.plugins.JavaPlugin
-import org.gradle.api.tasks.TaskAction
-import com.pietschy.gradle.plugin.gwt.GwtAppPlugin
+
+import com.pietschy.gradle.gwt.GwtAppPlugin
 import org.gradle.api.artifacts.Configuration
-import com.pietschy.gradle.plugin.gwt.GwtAppPlugin
 
 /**
  * Created by IntelliJ IDEA.
