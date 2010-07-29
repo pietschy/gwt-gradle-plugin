@@ -1,15 +1,11 @@
-package com.pietschy.gradle.plugin.gwt
+package com.pietschy.gradle.gwt
 
-import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.plugins.ProjectPluginsContainer
-import org.gradle.api.artifacts.Configuration
-import org.gradle.api.plugins.JavaPlugin
+
 import org.gradle.api.plugins.WarPlugin
-import org.gradle.api.artifacts.dsl.DependencyHandler
-import org.gradle.api.artifacts.dsl.ConfigurationHandler
-import com.pietschy.gradle.plugin.gwt.task.CompileGwt
-import org.gradle.api.Task
+
+import com.pietschy.gradle.gwt.task.CompileGwt
+
 import org.gradle.api.tasks.bundling.War
 
 

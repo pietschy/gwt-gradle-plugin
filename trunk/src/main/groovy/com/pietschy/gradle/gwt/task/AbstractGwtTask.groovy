@@ -1,17 +1,12 @@
-package com.pietschy.gradle.plugin.gwt.task
+package com.pietschy.gradle.gwt.task
 
 import org.gradle.api.Project
 import org.gradle.api.internal.ConventionTask
 import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.artifacts.Dependency
-import org.gradle.api.artifacts.FileCollectionDependency
-import org.gradle.api.plugins.WarPlugin
+
 import org.gradle.api.artifacts.Configuration
-import org.gradle.api.artifacts.SelfResolvingDependency
-import org.gradle.api.artifacts.ModuleDependency
-import org.gradle.api.artifacts.ExternalModuleDependency
-import org.gradle.api.artifacts.DependencyArtifact
-import com.pietschy.gradle.plugin.gwt.AbstractGwtPlugin
+
+import com.pietschy.gradle.gwt.AbstractGwtPlugin
 import org.gradle.api.artifacts.dsl.ConfigurationHandler
 
 /**
@@ -151,9 +146,8 @@ abstract class AbstractGwtTask extends ConventionTask
 
    public Set<File> getGwtTestDependenciesWithoutDev()
    {
-      return getGwtDependencies('testRuntime', false, true)
+      return getGwtDependencies(AbstractGwtPlugin.GWT_TEST_RUNTIME_CONFIGURATION_NAME, false, true)
    }
-
 
    private Set<File> getGwtDependencies(String conf, boolean includeDev, boolean includeUser)
    {

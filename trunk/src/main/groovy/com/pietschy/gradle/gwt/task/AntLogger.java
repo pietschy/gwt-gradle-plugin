@@ -1,4 +1,4 @@
-package com.pietschy.gradle.plugin.gwt.task;
+package com.pietschy.gradle.gwt.task;
 
 import org.apache.tools.ant.BuildLogger;
 import org.apache.tools.ant.BuildEvent;

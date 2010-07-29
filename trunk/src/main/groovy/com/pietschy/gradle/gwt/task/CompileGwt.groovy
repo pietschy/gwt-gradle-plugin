@@ -1,12 +1,8 @@
-package com.pietschy.gradle.plugin.gwt.task
+package com.pietschy.gradle.gwt.task
 
 import org.gradle.api.tasks.TaskAction
-import org.gradle.api.internal.ConventionTask
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.Project
-import org.gradle.api.plugins.JavaPlugin
-import org.gradle.api.logging.LogLevel
 
+import org.gradle.api.tasks.OutputDirectory
 
 /**
  * Created by IntelliJ IDEA.
