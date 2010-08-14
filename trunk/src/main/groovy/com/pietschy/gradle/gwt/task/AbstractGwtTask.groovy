@@ -24,12 +24,17 @@ abstract class AbstractGwtTask extends ConventionTask
 
    private Style style = null
 
+   // TODO: should move the following to a convention object so it can be set on a project level...
+   def List<String> jvmArgs = [] 
+   // the default Xmx value to use if it's no specified in the jvmArgs
+   def String defaultXmx = "512M"
+
+
    protected List<String> targetModules = []
 
    def AbstractGwtTask()
    {
    }
-
 
    public void modules(String[] modules)
    {
@@ -37,12 +42,12 @@ abstract class AbstractGwtTask extends ConventionTask
          targetModules += it
       }
    }
-   
+
    public Style getStyle()
    {
       return style;
    }
-   
+
    public void setStyle(Style style)
    {
       this.style = style;
@@ -65,10 +70,15 @@ abstract class AbstractGwtTask extends ConventionTask
       return new File(getDestinationRoot(), workDirName);
    }
 
-
    public List<String> getStandardJvmArgs()
    {
-      List<String> args = ['-Xmx512M'];
+      List<String> args = []
+      args += jvmArgs
+
+      if (!args.any{it.startsWith("-Xmx")})
+      {
+        args += ["-Xmx${defaultXmx}"]
+      }
 
       if (project.isGwt1() && project.isMacOs())
       {
@@ -81,6 +91,7 @@ abstract class AbstractGwtTask extends ConventionTask
 
       return args;
    }
+
 
    public Map<String,String> getStandardArgs()
    {
@@ -169,7 +180,7 @@ abstract class AbstractGwtTask extends ConventionTask
 
       return deps
    }
-  
+
    protected Set<File> getDeepDependencies(Configuration configuration)
    {
       HashSet<File> deps = new HashSet<File>()
@@ -185,7 +196,7 @@ abstract class AbstractGwtTask extends ConventionTask
    {
       project.ant.antProject.addBuildListener new AntLogger(project)
    }
-   
+
 
 }
  
